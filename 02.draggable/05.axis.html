@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-ui/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: 500px;
+            height: 500px;
+            border: 2px dashed chocolate;
+            margin: 0 auto;
+        }
+
+        .sub {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #sub-1 {
+            background-color: red;
+        }
+
+        #sub-2 {
+            background-color: blue;
+        }
+
+        #sub-3 {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="sub" id="sub-1"></div>
+        <div class="sub" id="sub-2"></div>
+        <div class="sub" id="sub-3"></div>
+    </div>
+    <script>
+        /*
+appendTo
+
+Type: jQuery or Element or Selector or String
+Default: "parent"
+Which element the draggable helper should be appended to while dragging.
+
+Note: The appendTo option only works when the helper option is set to not use the original element.
+
+Multiple types supported:
+
+jQuery: A jQuery object containing the element to append the helper to.
+Element: The element to append the helper to.
+Selector: A selector specifying which element to append the helper to.
+String: The string "parent" will cause the helper to be a sibling of the draggable.
+        */
+        $(document).ready(function () {
+            $(".sub").draggable({
+                containment: "#main",
+                //axis: "x",
+                axis: "y"
+            });
+        });
+    </script>
+</body>
+
+</html>
