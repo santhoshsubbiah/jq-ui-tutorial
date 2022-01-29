@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.3.2.min.js"
+        integrity="sha256-yDcKLQUDWenVBazEEeb0V6SbITYKIebLySKbrTp2eJk=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.7.2/jquery-ui.min.js"
+        integrity="sha256-4h4SHCCUAKFl7xWF9JeZp9tnU8lmM5bt6G3kNK6E4ek=" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: 500px;
+            height: 500px;
+            border: 2px dashed chocolate;
+            margin: 0 auto;
+        }
+
+        .sub {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #sub-1 {
+            background-color: red;
+        }
+
+        #sub-2 {
+            background-color: blue;
+        }
+
+        #sub-3 {
+            background-color: green;
+        }
+
+        /* 
+        
+        iframeFix 
+Type: Boolean or Selector
+Default: false
+Prevent iframes from capturing the mousemove events during a drag. Useful in combination with the cursorAt option, or in any case where the mouse cursor may not be over the helper.
+Multiple types supported:
+Boolean: When set to true, transparent overlays will be placed over all iframes on the page.
+Selector: Any iframes matching the selector will be covered by transparent overlays.
+        
+//TODO: Need to analysis more on this option.
+        
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container" style="background: lightgray;">
+        <div class="toolbar">
+            <div class="opt1"></div>
+            <div class="opt2"></div>
+        </div>
+        <iframe src="https://www.plus2net.com" style="border:medium solid black"></iframe>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".container").draggable({
+
+                iframefix: true
+            });
+        });
+    </script>
+</body>
+
+</html>
