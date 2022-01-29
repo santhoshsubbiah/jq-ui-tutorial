@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-ui/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <style>
+        .alias {
+            cursor: alias;
+        }
+
+        .all-scroll {
+            cursor: all-scroll;
+        }
+
+        .auto {
+            cursor: auto;
+        }
+
+        .cell {
+            cursor: cell;
+        }
+
+        .context-menu {
+            cursor: context-menu;
+        }
+
+        .col-resize {
+            cursor: col-resize;
+        }
+
+        .copy {
+            cursor: copy;
+        }
+
+        .crosshair {
+            cursor: crosshair;
+        }
+
+        .default {
+            cursor: default;
+        }
+
+        .e-resize {
+            cursor: e-resize;
+        }
+
+        .ew-resize {
+            cursor: ew-resize;
+        }
+
+        .grab {
+            cursor: -webkit-grab;
+            cursor: grab;
+        }
+
+        .grabbing {
+            cursor: -webkit-grabbing;
+            cursor: grabbing;
+        }
+
+        .help {
+            cursor: help;
+        }
+
+        .move {
+            cursor: move;
+        }
+
+        .n-resize {
+            cursor: n-resize;
+        }
+
+        .ne-resize {
+            cursor: ne-resize;
+        }
+
+        .nesw-resize {
+            cursor: nesw-resize;
+        }
+
+        .ns-resize {
+            cursor: ns-resize;
+        }
+
+        .nw-resize {
+            cursor: nw-resize;
+        }
+
+        .nwse-resize {
+            cursor: nwse-resize;
+        }
+
+        .no-drop {
+            cursor: no-drop;
+        }
+
+        .none {
+            cursor: none;
+        }
+
+        .not-allowed {
+            cursor: not-allowed;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .progress {
+            cursor: progress;
+        }
+
+        .row-resize {
+            cursor: row-resize;
+        }
+
+        .s-resize {
+            cursor: s-resize;
+        }
+
+        .se-resize {
+            cursor: se-resize;
+        }
+
+        .sw-resize {
+            cursor: sw-resize;
+        }
+
+        .text {
+            cursor: text;
+        }
+
+        .url {
+            cursor: url(myBall.cur), auto;
+        }
+
+        .w-resize {
+            cursor: w-resize;
+        }
+
+        .wait {
+            cursor: wait;
+        }
+
+        .zoom-in {
+            cursor: zoom-in;
+        }
+
+        .zoom-out {
+            cursor: zoom-out;
+        }
+    </style>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: 500px;
+            height: 500px;
+            border: 2px dashed chocolate;
+            margin: 0 auto;
+        }
+
+        .sub {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #sub-1 {
+            background-color: red;
+        }
+
+        #sub-2 {
+            background-color: blue;
+        }
+
+        #sub-3 {
+            background-color: green;
+        }
+
+        /* 
+        
+        cursor 
+Type: String
+Default: "auto"
+The CSS cursor during the drag operation.
+        
+        
+        
+        */
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="sub" id="sub-1">
+        </div>
+        <div class="sub" id="sub-2"></div>
+        <div class="sub" id="sub-3"></div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(".sub").draggable({
+                containment: "#main",
+                cursor: "move"
+            });
+        });
+    </script>
+</body>
+
+</html>
