@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-ui/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: 500px;
+            height: 500px;
+            border: 2px dashed chocolate;
+            margin: 0 auto;
+        }
+
+        .sub {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #sub-1 {
+            background-color: red;
+        }
+
+        #sub-2 {
+            background-color: blue;
+        }
+
+        #sub-3 {
+            background-color: green;
+        }
+
+        .title {
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        /* 
+        
+containment 
+
+Type: Selector or Element or String or Array
+Default: false
+Constrains dragging to within the bounds of the specified element or region.
+Multiple types supported:
+Selector: The draggable element will be contained to the bounding box of the first element found by the selector. If no element is found, no containment will be set.
+Element: The draggable element will be contained to the bounding box of this element.
+String: Possible values: "parent", "document", "window".
+Array: An array defining a bounding box in the form [ x1, y1, x2, y2 ].
+        
+        
+        
+        */
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="sub" id="sub-1">
+        </div>
+        <div class="sub" id="sub-2"></div>
+        <div class="sub" id="sub-3"></div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(".sub").draggable({
+                containment: "#main"
+            });
+        });
+    </script>
+</body>
+
+</html>
