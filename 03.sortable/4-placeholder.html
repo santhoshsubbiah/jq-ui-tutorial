@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../jquery-ui/external/jquery/jquery.js"></script>
+
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <style>
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+        }
+
+        #sortable li {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            height: 1.5em;
+        }
+
+        html>body #sortable li {
+            height: 1.5em;
+            line-height: 1.2em;
+        }
+
+        .ui-state-highlight {
+            height: 1.5em;
+            line-height: 1.2em;
+        }
+        .santhosh {
+            background: purple;
+            width: 800px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#sortable").sortable({
+                placeholder: "santhosh",
+                forcePlaceholderSize: false // no use
+            });
+            $("#sortable").disableSelection();
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="sortable">
+        <li class="ui-state-default">Item 1</li>
+        <li class="ui-state-default">Item 2</li>
+        <li class="ui-state-default">Item 3</li>
+        <li class="ui-state-default">Item 4</li>
+        <li class="ui-state-default">Item 5</li>
+        <li class="ui-state-default">Item 6</li>
+        <li class="ui-state-default">Item 7</li>
+    </ul>
+</body>
+
+</html>
