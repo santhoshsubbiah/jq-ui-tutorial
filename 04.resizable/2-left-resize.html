@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../jquery-ui/external/jquery/jquery.js"></script>
+
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background: lightgoldenrodyellow;
+            position: relative;
+        }
+
+        .child {
+            position: absolute;
+            top: 10px;
+            /* left: calc(100vw - 150px); */
+            background: lightgray;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#child").resizable({
+                handles: "w, s"
+            });
+        });
+    </script>
+</head>
+
+<body style="direction: rtl;">
+    <div class="main">
+        <div class="child" id="child">
+
+        </div>
+    </div>
+</body>
+
+</html>

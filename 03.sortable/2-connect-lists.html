@@ -29,17 +29,27 @@
             font-size: 1.2em;
             width: 120px;
         }
+        li.ui-sortable-placeholder {
+            border: 1px dotted blue;
+            background: red;
+            visibility: visible !important;
+        }
     </style>
     <script>
         $(function () {
             $("#sortable1, #sortable2").sortable({
                 connectWith: ".connectedSortable"
             }).disableSelection();
+
+            $("#santhosh").draggable({
+                connectToSortable: "sortable2"
+            })
         });
     </script>
 </head>
 
 <body>
+    <div id="santhosh" style="background: red;width: 100px;height: 100px;"></div>
     <ul id="sortable1" class="connectedSortable">
         <li class="ui-state-default">Item 1</li>
         <li class="ui-state-default">Item 2</li>
